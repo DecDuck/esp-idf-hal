@@ -412,7 +412,7 @@ where
     P: InputPin + 'd,
     M: GPIOMode + 'd,
 {
-    pub pindriver: &'d PinDriver<'d, P, M>,
+    pub pindriver: PinDriver<'d, P, M>,
     pub wake_level: Level,
 }
 

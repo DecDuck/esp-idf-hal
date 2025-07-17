@@ -186,3 +186,5 @@ pub(crate) use embedded_hal_error;
 pub(crate) use impl_peripheral;
 #[allow(unused_imports)]
 pub(crate) use impl_peripheral_trait;
+
+fn main() {}
