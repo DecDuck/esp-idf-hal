@@ -444,7 +444,7 @@ impl<'a> UartWakeup<'a> {
 
     fn apply(&self) -> Result<(), EspError> {
         esp!(unsafe { uart_set_wakeup_threshold(self.uart.port(), self.threshold) })?;
-        esp!(unsafe { esp_sleep_enable_uart_wakeup(self.uart.port()) })?;
+        esp!(unsafe { esp_sleep_enable_uart_wakeup(self.uart.port().try_into().unwrap()) })?;
         Ok(())
     }
 }
