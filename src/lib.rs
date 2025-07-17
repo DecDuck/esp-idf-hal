@@ -60,6 +60,9 @@ pub mod rmt;
 pub mod rom;
 #[cfg(feature = "experimental")]
 pub mod sd;
+#[cfg(not(feature = "riscv-ulp-hal"))]
+pub mod sleep;
+#[cfg(not(feature = "riscv-ulp-hal"))]
 pub mod spi;
 pub mod sys;
 pub mod task;
